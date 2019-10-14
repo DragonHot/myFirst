@@ -21,13 +21,13 @@
       <tbody>
         <tr v-for="(item, index) in filterData" :key="index">
           <td>
-            <div class="item" :style="{backgroundImage: 'url(' + item.src + ')'}">
-              <router-link to="/critters">{{item.name}}</router-link>
+            <div class="item" :style="{backgroundImage: 'url(' + item.name.src + ')'}">
+              <router-link to="/critters">{{item.name.text}}</router-link>
             </div>
           </td>
           <td>{{item.quality}}</td>
           <td>{{item.calories}}</td>
-          <td>{{item.spoilTime}}</td>
+          <td>{{item.spoilTimeDes ? item.spoilTimeDes : item.spoilTime}}</td>
           <td>{{item.cooking}}</td>
         </tr>
       </tbody>
@@ -65,7 +65,7 @@ export default {
       var sortName = this.tableData.map[index];
       this.filterData.sort((a, b) => {
         var res;
-        if (parseInt(a[sortName])) {
+        if (sortName !== 'name') {
           res = parseInt(a[sortName]) - parseInt(b[sortName]);
         } else {
           res = a[sortName] === b[sortName] ? 0 : a[sortName] > b[sortName] ? 1 : -1;

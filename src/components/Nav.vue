@@ -1,14 +1,16 @@
 <template>
   <div class="nav">
-    <div class="title">缺氧百科</div>
-    <div
-      class="item"
-      v-for="(item, key) in items"
-      v-bind:key="key"
-      v-bind:class="{ current: key === currentItem }"
-      @click="goto(key)"
-    >
-      {{ item }}
+    <div class="main">
+      <div class="title">缺氧百科</div>
+      <div
+        class="item"
+        v-for="(item, key) in items"
+        v-bind:key="key"
+        v-bind:class="{ current: key === currentItem }"
+        @click="goto(key)"
+      >
+        {{ item }}
+      </div>
     </div>
   </div>
 </template>
@@ -54,11 +56,15 @@ a {
 }
 
 .nav {
-  height: 50px;
   background: #333;
-  display: flex;
-  padding: 0 50px;
   color: #fff;
+}
+
+.main {
+  display: flex;
+  height: 50px;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
