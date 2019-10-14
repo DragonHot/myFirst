@@ -52,7 +52,6 @@ export default {
 <style scoped>
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 .nav {

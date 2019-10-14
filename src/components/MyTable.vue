@@ -111,10 +111,6 @@ td {
   font-weight: normal;
 }
 
-a {
-  text-decoration: none;
-}
-
 .columns-name {
   user-select:none;
   cursor: pointer;

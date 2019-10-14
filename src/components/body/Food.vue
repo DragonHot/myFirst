@@ -1,10 +1,5 @@
 <template>
   <div class="food">
-    <!-- food page
-    <p>{{currRecipe}}</p>
-    <ul>
-      <li v-for="(item, index) in recipeList" v-bind:key="index">{{item}}</li>
-    </ul> -->
     <div class="search">
       <input
         v-model="searchName"
@@ -14,23 +9,72 @@
         placeholder="搜索名称"
       >
     </div>
-    <MyTable :table-data="foodData" :search-name="searchName"/>
+    <table class="item-table">
+      <thead>
+        <tr>
+          <th v-for="(name, index) in foodData.th" :key="index">
+            <Tips
+              v-if="foodData.description[index]"
+              :option="tipStyle"
+              :msg="foodData.description[index]"
+            />
+            <span class="columns-name" @click="changeSort(index)">{{name}}</span>
+            <svg
+              :class="{ 'arrow-up': sort.up, hide: index !== sort.index}"
+              class="arrow"
+              viewBox="0 2 20 20">
+              <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path>
+            </svg>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(item, index) in filterData" :key="index">
+          <td>
+            <div class="item" :style="{backgroundImage: 'url(' + item.src + ')'}">
+              <router-link to="/critters">{{item.name}}</router-link>
+            </div>
+          </td>
+          <td>{{item.quality}}</td>
+          <td>{{item.calories}}</td>
+          <td>{{item.spoilTimeDes ? item.spoilTimeDes : item.spoilTime}}</td>
+          <td>{{item.cooking}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import MyTable from '@/components/MyTable';
+import Tips from '@/components/Tips';
 
 export default {
   name: 'Food',
   components: {
-    MyTable
+    Tips
+  },
+  data () {
+    return {
+      searchName: '',
+      sort: {
+        index: 0,
+        up: false
+      },
+      tipStyle: {
+        width: '20px',
+        height: '20px',
+        top: '3px'
+      }
+    };
   },
   computed: {
     ...mapState({
       foodData: state => state.foodData
-    })
+    }),
+    filterData () {
+      return this.$store.getters.getDataByName(this.searchName);
+    }
   },
   methods: {
     ...mapActions([
@@ -39,12 +83,36 @@ export default {
     ]),
     addNewRecipt (type) {
       this.add_new_recipt(type);
+    },
+    changeSort (index) { // changeSort function (index) 好像没区别
+      if (this.sort.index === index) {
+        this.sort.up = !this.sort.up;
+      } else {
+        this.sort.up = false;
+        this.sort.index = index;
+      }
+      var sortName = this.foodData.map[index];
+      this.filterData.sort((a, b) => {
+        var res;
+        if (parseInt(sortName)) {
+          res = parseInt(a[sortName]) - parseInt(b[sortName]);
+        } else {
+          res = a[sortName] === b[sortName] ? 0 : a[sortName] > b[sortName] ? 1 : -1;
+        }
+        return this.sort.up ? res : -res;
+      });
     }
   },
-  data () {
-    return {
-      searchName: ''
-    };
+  watch: {
+    // searchName: function () {
+    //   if (this.searchName) {
+    //     this.filterData = this.foodData.td.filter((item) => {
+    //       return item.name.includes(this.searchName);
+    //     });
+    //   } else {
+    //     this.filterData = this.foodData.td;
+    //   }
+    // }
   }
 };
 </script>

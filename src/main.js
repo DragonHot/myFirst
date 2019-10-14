@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import store from './store/index';
+import '../static/css/global.css';
 
 Vue.config.productionTip = false;
 
