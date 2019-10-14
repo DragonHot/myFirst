@@ -4,11 +4,11 @@ import Vuex from 'vuex';
 import actions from '@/store/actions.js';
 import getters from '@/store/getters.js';
 import mutations from '@/store/mutations.js';
+import foodData from '@/store/data/food.js';
 
 Vue.use(Vuex);
 const state = {
-  recipeList: ['🍞', '水果', '牛奶'],
-  currRecipe: 0
+  foodData
 };
 
 // if (module.hot) {

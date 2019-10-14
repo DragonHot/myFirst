@@ -2,9 +2,11 @@
   <div class="hello">
     <header><Nav/></header>
     <body>
-      <router-view/>
+      <div class="body">
+        <router-view/>
+      </div>
     </body>
-    <footer>这是尾巴</footer>
+    <footer></footer>
   </div>
 </template>
 
@@ -52,5 +54,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.body {
+  width: 1200px;
+  margin: 0 auto;
+}
 </style>

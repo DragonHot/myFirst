@@ -4,10 +4,12 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import Food from '@/components/body/Food';
 import Critters from '@/components/body/Critters';
+import Detail from '@/components/body/Detail';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -24,6 +26,11 @@ export default new Router({
           path: 'critters',
           name: 'Critters',
           component: Critters
+        },
+        {
+          path: 'food/:name',
+          name: 'Detail',
+          component: Detail
         }
       ]
     },
