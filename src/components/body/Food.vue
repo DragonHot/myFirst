@@ -85,6 +85,7 @@ export default {
       this.add_new_recipt(type);
     },
     changeSort (index) { // changeSort function (index) 好像没区别
+      console.log(23333);
       if (this.sort.index === index) {
         this.sort.up = !this.sort.up;
       } else {
@@ -94,7 +95,7 @@ export default {
       var sortName = this.foodData.map[index];
       this.filterData.sort((a, b) => {
         var res;
-        if (parseInt(sortName)) {
+        if (parseInt(a[sortName])) {
           res = parseInt(a[sortName]) - parseInt(b[sortName]);
         } else {
           res = a[sortName] === b[sortName] ? 0 : a[sortName] > b[sortName] ? 1 : -1;
