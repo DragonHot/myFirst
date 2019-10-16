@@ -76,6 +76,9 @@ export default {
       return this.$store.getters.getDataByName(this.searchName);
     }
   },
+  mounted () {
+    this.changeSort(1); // 初始按品质排序
+  },
   methods: {
     ...mapActions([
       'add_new_recipt',
@@ -85,7 +88,6 @@ export default {
       this.add_new_recipt(type);
     },
     changeSort (index) { // changeSort function (index) 好像没区别
-      console.log(23333);
       if (this.sort.index === index) {
         this.sort.up = !this.sort.up;
       } else {

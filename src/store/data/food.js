@@ -35,7 +35,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'cooked_fish',
+      name: '烤鱼排',
       src: require('@/assets/image/cooked_fish.png'),
       quality: 3,
       calories: '1600 kcal',
@@ -43,7 +43,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'fried_mushroom',
+      name: '煎蘑菇',
       src: require('@/assets/image/fried_mushroom.png'),
       quality: 1,
       calories: '2800 kcal',
@@ -51,7 +51,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'frost_bun',
+      name: '冰霜面包',
       src: require('@/assets/image/frost_bun.png'),
       quality: 2,
       calories: '1200 kcal',
@@ -59,7 +59,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'frost_burger',
+      name: '冰霜汉堡',
       src: require('@/assets/image/frost_burger.png'),
       quality: 6,
       calories: '6000 kcal',
@@ -67,7 +67,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'gristle_berry',
+      name: '炙烤刺果',
       src: require('@/assets/image/gristle_berry.png'),
       quality: 1,
       calories: '2000 kcal',
@@ -75,15 +75,16 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'hexalent_fruit',
+      name: '六角根果',
       src: require('@/assets/image/hexalent_fruit.png'),
       quality: -1,
       calories: '6400 kcal',
-      spoilTime: '4周期',
+      spoilTime: '65535',
+      spoilTimeDes: '永不腐烂',
       cooking: '不需要'
     },
     {
-      name: 'lettuce',
+      name: '海生菜',
       src: require('@/assets/image/lettuce.png'),
       quality: 0,
       calories: '400 kcal',
@@ -91,7 +92,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'liceloaf',
+      name: '米虱面包',
       src: require('@/assets/image/liceloaf.png'),
       quality: 0,
       calories: '1700 kcal',
@@ -99,7 +100,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'meal_lice',
+      name: '米虱',
       src: require('@/assets/image/meal_lice.png'),
       quality: -1,
       calories: '600 kcal',
@@ -107,7 +108,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'meat',
+      name: '肉',
       src: require('@/assets/image/meat.png'),
       quality: -1,
       calories: '1600 kcal',
@@ -115,15 +116,16 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'muckroot',
+      name: '淤泥根',
       src: require('@/assets/image/muckroot.png'),
       quality: -1,
       calories: '800 kcal',
-      spoilTime: '4周期',
+      spoilTime: '65535',
+      spoilTimeDes: '永不腐烂',
       cooking: '不需要'
     },
     {
-      name: 'mush_bar',
+      name: '软泥糕',
       src: require('@/assets/image/mush_bar.png'),
       quality: -1,
       calories: '800 kcal',
@@ -131,7 +133,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'mush_fry',
+      name: '炸泥糕',
       src: require('@/assets/image/mush_fry.png'),
       quality: 0,
       calories: '1050 kcal',
@@ -139,7 +141,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'mushroom',
+      name: '蘑菇',
       src: require('@/assets/image/mushroom.png'),
       quality: 0,
       calories: '2400 kcal',
@@ -147,7 +149,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'mushroom_wrap',
+      name: '蘑菇卷',
       src: require('@/assets/image/mushroom_wrap.png'),
       quality: 4,
       calories: '4800 kcal',
@@ -155,7 +157,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'nosh_bean',
+      name: '小吃豆',
       src: require('@/assets/image/nosh_bean.png'),
       quality: 3,
       calories: '0 kcal',
@@ -163,15 +165,16 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'nutrient_bar',
+      name: '营养棒',
       src: require('@/assets/image/nutrient_bar.png'),
       quality: -1,
       calories: '800 kcal',
-      spoilTime: '16周期',
+      spoilTime: '65535',
+      spoilTimeDes: '永不腐烂',
       cooking: '不需要'
     },
     {
-      name: 'omelette',
+      name: '煎蛋卷',
       src: require('@/assets/image/omelette.png'),
       quality: 2,
       calories: '2800 kcal',
@@ -179,7 +182,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'pacu_fillet',
+      name: '帕库鱼片',
       src: require('@/assets/image/pacu_fillet.png'),
       quality: 2,
       calories: '1000 kcal',
@@ -187,7 +190,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'pepper_bread',
+      name: '火椒面包',
       src: require('@/assets/image/pepper_bread.png'),
       quality: 5,
       calories: '4000 kcal',
@@ -195,7 +198,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'pickled_meal',
+      name: '腌制米虱',
       src: require('@/assets/image/pickled_meal.png'),
       quality: -1,
       calories: '1800 kcal',
@@ -203,7 +206,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'pincha_peppernut',
+      name: '火椒粒',
       src: require('@/assets/image/pincha_peppernut.png'),
       quality: 0,
       calories: '0 kcal',
@@ -211,7 +214,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'raw_egg',
+      name: '生蛋',
       src: require('@/assets/image/raw_egg.png'),
       quality: -1,
       calories: '0 kcal',
@@ -219,7 +222,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'sleet_wheat_grain',
+      name: '冰霜麦粒',
       src: require('@/assets/image/sleet_wheat_grain.png'),
       quality: 0,
       calories: '0 kcal',
@@ -227,7 +230,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'spicy_tofu',
+      name: '麻婆豆腐',
       src: require('@/assets/image/spicy_tofu.png'),
       quality: 5,
       calories: '4000 kcal',
@@ -235,15 +238,15 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'stuffed_berry',
+      name: '寿司',
       src: require('@/assets/image/stuffed_berry.png'),
-      quality: 4,
-      calories: '4400 kcal',
+      quality: 3,
+      calories: '1600 kcal',
       spoilTime: '2周期',
       cooking: '不需要'
     },
     {
-      name: 'surf_turf',
+      name: '海陆双拼',
       src: require('@/assets/image/surf_turf.png'),
       quality: 4,
       calories: '6000 kcal',
@@ -251,7 +254,7 @@ export default {
       cooking: '不需要'
     },
     {
-      name: 'tofu',
+      name: '豆腐',
       src: require('@/assets/image/tofu.png'),
       quality: 2,
       calories: '3600 kcal',
